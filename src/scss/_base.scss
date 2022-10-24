@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body,
@@ -8,10 +10,17 @@ html {
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
+
+	@media screen and (max-width:768px) {
+		&.active {
+			overflow-y: hidden;
+			overflow-x: hidden;
+		}
+	}
 }
 
 img {

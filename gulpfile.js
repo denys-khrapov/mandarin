@@ -53,7 +53,7 @@ function scriptsBuild() {
 function styles() {
 	return src('src/scss/**/*.scss')
 		.pipe(sourceMaps.init())
-		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: false }))
 		.pipe(sourceMaps.write())
 		.pipe(sass())
 		.pipe(dest('src/css/'))
@@ -64,7 +64,7 @@ function styles() {
 function stylesBuild() {
 	return src('./src/scss/**/*.scss')
 		.pipe(groupMedia())
-		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: false }))
 		.pipe(cleancss(({ level: { 1: { specialComments: 0 } } /*, format: 'beautify'*/ })))
 		.pipe(dest('src/css/'))
 		.pipe(dest('build/css/'))
