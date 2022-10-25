@@ -43,6 +43,24 @@ a {
   text-decoration: none;
 }
 
+.button {
+  padding: 1rem 1.5rem;
+  background-color: #f9032f;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #000;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -145,23 +163,6 @@ a {
   text-transform: uppercase;
   margin-bottom: 3rem;
 }
-.trainers__button {
-  padding: 1rem 1.5rem;
-  background-color: #f9032f;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-.trainers__button:hover {
-  background-color: #000;
-}
 
 .services {
   padding: 8rem calc((100vw - 1200px) / 2);
@@ -202,4 +203,65 @@ a {
 .fa-check-circle {
   color: #f9032f;
   margin-right: 0.5rem;
+}
+
+.membership {
+  padding: 6rem calc((100vw - 1200px) / 2);
+  color: #fff;
+  background: #000;
+  text-align: center;
+}
+.membership__title {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  padding: 0 1rem;
+}
+.membership__description {
+  margin-bottom: 3rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  padding: 1rem;
+}
+.membership__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+@media screen and (max-width: 1200px) {
+  .membership__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.membership__card {
+  padding: 2rem;
+  min-height: 450px;
+  width: 325px;
+  background: #fff;
+  border-radius: 10px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .membership__card {
+    width: 80%;
+    margin-bottom: 1.5rem;
+  }
+}
+.membership__card .card-icon {
+  color: #f9032f;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.membership__card h3 {
+  font-size: clamp(1rem, 5vw, 2rem);
+  margin-bottom: 2rem;
+}
+.membership__perks {
+  min-height: 150px;
+}
+.membership__perks p {
+  margin-bottom: 1rem;
 }

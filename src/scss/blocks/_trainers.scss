@@ -26,23 +26,4 @@
 		text-transform: uppercase;
 		margin-bottom: 3rem;
 	}
-
-	&__button {
-		padding: 1rem 1.5rem;
-		background-color: $red;
-		color: $white;
-		font-size: 1rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		border-radius: 5px;
-		transition: all 0.3s ease;
-		text-decoration: none;
-		outline: none;
-		border: none;
-		cursor: pointer;
-
-		&:hover {
-			background-color: $black;
-		}
-	}
 }
