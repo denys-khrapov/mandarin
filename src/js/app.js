@@ -13,6 +13,21 @@ const mobileMenu = () => {
 
 menu.addEventListener("click", mobileMenu);
 
+// Scroll to Top
+const scrollBtn = document.querySelector(".isShowBtn");
+
+window.onscroll = () => {
+  if (window.scrollY > 4000) {
+    scrollBtn.classList.remove("isShowBtn--hide");
+  } else {
+    scrollBtn.classList.add("isShowBtn--hide");
+  }
+};
+
+scrollBtn.onclick = () => {
+  window.scrollTo(0, 0);
+};
+
 // Animations
 gsap.registerPlugin(ScrollTrigger);
 
