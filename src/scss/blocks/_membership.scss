@@ -61,8 +61,11 @@
 	&__perks {
 		min-height: 150px;
 
-		p {
-			margin-bottom: 1rem;
+		ul {
+			li {
+				font-weight: 600;
+				margin-bottom: 1rem;
+			}
 		}
 	}
 

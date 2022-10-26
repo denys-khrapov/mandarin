@@ -262,7 +262,8 @@ a {
 .membership__perks {
   min-height: 150px;
 }
-.membership__perks p {
+.membership__perks ul li {
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
@@ -371,4 +372,72 @@ a {
 .team__person:hover .team__name {
   transition: all 0.3s ease;
   color: #f9032f;
+}
+
+.email {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 35%, rgba(0, 0, 0, 0.1) 100%), url(../../img/gym-3.jpg);
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+  padding: 5rem calc((100vw - 1200px) / 2);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.email__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email__title {
+  font-size: clamp(1rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+.email__text {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .form__button {
+    width: 100%;
+    min-width: 350px;
+  }
+}
+@media screen and (max-widht: 400px) {
+  .form__button {
+    min-width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+}
+.form__wrapper input {
+  padding: 1rem 1.5rem;
+  outline: none;
+  width: 350px;
+  height: 50px;
+  border: none;
+  margin-right: 1rem;
+  border-radius: 4px;
+}
+@media screen and (max-width: 768px) {
+  .form__wrapper input {
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-right: 0;
+  }
 }
