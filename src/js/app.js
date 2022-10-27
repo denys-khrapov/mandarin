@@ -1,6 +1,6 @@
 // Mobile menu
 
-const menu = document.querySelector("#mobile-menu");
+const menu = document.querySelector(".mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
 const navLogo = document.querySelector(".navbar__logo");
 const body = document.querySelector("body");
@@ -22,11 +22,30 @@ window.onscroll = () => {
   } else {
     scrollBtn.classList.add("isShowBtn--hide");
   }
+  if (window.scrollY > 200) {
+    progressBar.classList.remove("progress-bar--hide");
+  } else {
+    progressBar.classList.add("progress-bar--hide");
+  }
 };
 
 scrollBtn.onclick = () => {
   window.scrollTo(0, 0);
 };
+
+// Progress bar
+const progressBar = document.querySelector(".progress-bar");
+const progressBarInner = document.querySelector(".progress-bar__inner");
+
+//Show progress bar
+
+window.addEventListener("scroll", function () {
+  let h = document.documentElement;
+  let st = h.scrollTop || document.body.scrollTop;
+  let sh = h.scrollHeight || document.body.scrollHeight;
+  let percent = (st / (sh - h.clientHeight)) * 100;
+  progressBarInner.style.width = percent + "%";
+});
 
 // Animations
 gsap.registerPlugin(ScrollTrigger);

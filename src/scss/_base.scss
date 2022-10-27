@@ -19,6 +19,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 
+
 	@media screen and (max-width:768px) {
 		&.active {
 			overflow-y: hidden;
@@ -97,5 +98,34 @@ a {
 
 	&--hide {
 		margin-bottom: -12rem;
+	}
+}
+
+.progress-bar-wrapper {
+	position: sticky;
+	bottom: 0;
+
+}
+
+.progress-bar {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+	margin-bottom: 0rem;
+	transition: all 0.3s ease;
+
+	&--hide {
+		margin-bottom: -12rem;
+	}
+
+	&__inner {
+		position: relative;
+		width: 0%;
+		padding: 0;
+		height: 10px;
+		background-color: $red;
+		color: $white;
 	}
 }
